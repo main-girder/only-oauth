@@ -14,7 +14,7 @@
         <module>only-oauth-platform</module>
         <module>only-oauth-spring</module>
         <module>only-oauth-sample</module>
-        <module>only-oauth-dependencies</module>
+        <module>only-oauth-bom</module>
         <module>only-oauth-all</module>
     </modules>
 
