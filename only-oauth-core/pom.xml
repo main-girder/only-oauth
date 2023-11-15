@@ -5,8 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.only.oauth</groupId>
-        <artifactId>only-oauth</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <artifactId>only-oauth-bom</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../only-oauth-bom/pom.xml</relativePath>
     </parent>
 
     <artifactId>only-oauth-core</artifactId>
