@@ -27,6 +27,8 @@
         <jacoco-version>0.8.2</jacoco-version>
         <guava.version>32.0.1-jre</guava.version>
         <maven-javadoc.version>3.5.0</maven-javadoc.version>
+        <commons-lang3.version>3.13.0</commons-lang3.version>
+        <reflectasm.version>1.11.9</reflectasm.version>
         <only-oauth.version>1.0.0-SNAPSHOT</only-oauth.version>
     </properties>
 
@@ -81,6 +83,11 @@
                 <artifactId>alipay-sdk-java</artifactId>
                 <version>${alipay-sdk-version}</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
