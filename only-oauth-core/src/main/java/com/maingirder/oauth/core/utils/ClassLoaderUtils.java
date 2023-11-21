@@ -1,5 +1,7 @@
 package com.maingirder.oauth.core.utils;
 
+import lombok.SneakyThrows;
+
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
@@ -19,29 +21,38 @@ public class ClassLoaderUtils {
     /**
      * 获取接口的实现类集合
      *
-     * @param cls
+     * @param clazz
      * @return
-     * @throws Exception
      */
-    public static List<Class<?>> getListByClass(Class<?> cls) throws ClassNotFoundException {
+    public static List<Class<?>> getListByClass(Class<?> clazz) {
         List<Class<?>> classes = new ArrayList<>();
-        for (Class<?> c : getClasses(cls)) {
-            if (cls.isAssignableFrom(c) && !cls.equals(c)) {
+        for (Class<?> c : getClasses(clazz)) {
+            if (clazz.isAssignableFrom(c) && !clazz.equals(c)) {
                 classes.add(c);
             }
         }
         return classes;
     }
 
-    private static List<Class<?>> getClasses(Class<?> cls) throws ClassNotFoundException {
-        String packageName = cls.getPackage().getName();
+
+    private static List<Class<?>> getClasses(Class<?> clazz) {
+        String packageName = clazz.getPackage().getName();
         String path = packageName.replace('.', '/');
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         URL url = classloader.getResource(path);
         return getClasses(new File(Objects.requireNonNull(url).getFile()), packageName);
     }
 
-    private static List<Class<?>> getClasses(File dir, String packageName) throws ClassNotFoundException {
+    /**
+     * 根据目录以及包名获取class列表
+     * todo @SneakyThrows 临时使用后期替换
+     *
+     * @param dir
+     * @param packageName
+     * @return
+     */
+    @SneakyThrows
+    private static List<Class<?>> getClasses(File dir, String packageName) {
         List<Class<?>> classes = new ArrayList<>();
         if (!dir.exists()) {
             return classes;
