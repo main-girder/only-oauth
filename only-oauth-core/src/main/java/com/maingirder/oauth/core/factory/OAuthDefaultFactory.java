@@ -3,6 +3,7 @@ package com.maingirder.oauth.core.factory;
 import com.maingirder.oauth.core.annotation.Platform;
 import com.maingirder.oauth.core.enums.OAuthPlatformEnum;
 import com.maingirder.oauth.core.handler.OAuthHandler;
+import com.maingirder.oauth.core.model.OAuthProcess;
 import com.maingirder.oauth.core.utils.ClassLoaderUtils;
 
 import java.util.EnumMap;
@@ -37,9 +38,7 @@ public final class OAuthDefaultFactory implements OAuthFactory {
     }
 
     @Override
-    public OAuthHandler getPlatformHandler(OAuthPlatformEnum platformName) throws InstantiationException, IllegalAccessException {
-        return (OAuthHandler) CONTAINER.get(platformName).newInstance();
+    public OAuthHandler getPlatformHandler(OAuthPlatformEnum platformName, OAuthProcess process) throws Exception {
+        return (OAuthHandler) CONTAINER.get(platformName).getConstructor(OAuthProcess.class).newInstance(process);
     }
-
-
 }
