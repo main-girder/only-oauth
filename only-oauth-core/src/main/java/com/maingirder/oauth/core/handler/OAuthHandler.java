@@ -15,7 +15,7 @@ import com.maingirder.oauth.core.model.OAuthUser;
  * 4) {@link OAuthHandler#cancel}: 取消授权的url. 非必须实现接口（部分平台不支持）
  * 5) {@link OAuthHandler#refresh}: 刷新授权的url. 非必须实现接口（部分平台不支持）
  *
- * @author maxy
+ * @author max
  * @since 1.0.0
  */
 public interface OAuthHandler {

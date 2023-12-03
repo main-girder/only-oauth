@@ -5,16 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.maingirder</groupId>
-        <artifactId>only-oauth-bom</artifactId>
+        <artifactId>only-oauth-platform</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../only-oauth-bom/pom.xml</relativePath>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <name>only-oauth-platform</name>
-    <artifactId>only-oauth-platform</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>only-oauth-github</artifactId>
 
-    <modules>
-        <module>only-oauth-github</module>
-    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.maingirder</groupId>
+            <artifactId>only-oauth-core</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>

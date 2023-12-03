@@ -3,8 +3,7 @@ package com.maingirder.oauth.core.enums;
 import com.maingirder.oauth.process.annotation.DynamicEnum;
 
 /**
- * oauth platform general config
- *
+ * 平台信息枚举（编译期读取配置文件动态生成枚举）
  * @author jason-guo-cr
  * @version 1.0.0
  * @since 2023/11/20 22:00
