@@ -1,0 +1,31 @@
+{
+  "fields": [
+    "authorizeUrl",
+    "accessTokenUrl",
+    "userInfoUrl",
+    "revokeUrl",
+    "refreshTokenUrl",
+    "value"
+  ],
+  "enums": [
+    {
+      "WECHAT": {
+        "authorizeUrl": "wechat-authorizeUrl",
+        "accessTokenUrl": "wechat-accessTokenUrl",
+        "userInfoUrl": "wechat-userInfoUrl",
+        "revokeUrl": "wechat-revokeUrl",
+        "refreshTokenUrl": "wechat-refreshTokenUrl",
+        "value": "112233"
+      }
+    },
+    {
+      "APPLE": {
+        "authorizeUrl": "apple-authorizeUrl",
+        "accessTokenUrl": "apple-accessTokenUrl",
+        "userInfoUrl": "apple-userInfoUrl",
+        "revokeUrl": "apple-revokeUrl",
+        "refreshTokenUrl": "apple-refreshTokenUrl"
+      }
+    }
+  ]
+}

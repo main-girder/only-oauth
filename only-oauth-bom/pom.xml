@@ -55,6 +55,12 @@
                 <artifactId>only-oauth-all</artifactId>
                 <version>${only-oauth.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.maingirder</groupId>
+                <artifactId>only-oauth-process</artifactId>
+                <version>${only-oauth.version}</version>
+            </dependency>
+
             <!-- 三方包 -->
             <dependency>
                 <groupId>com.google.guava</groupId>

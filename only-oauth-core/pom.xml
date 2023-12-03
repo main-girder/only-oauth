@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>only-oauth-core</artifactId>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -20,6 +21,11 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.maingirder</groupId>
+            <artifactId>only-oauth-process</artifactId>
         </dependency>
     </dependencies>
 </project>
